@@ -13,6 +13,7 @@ terraform {
 # Configure the Microsoft Azure Provider (this is the provider block)
 provider "azurerm" {
   features {}
+  subscription_id = "f7f5f1df-fec4-41dc-a919-6f2ece0a4569"
 }
 
 # Create Resource Group 
