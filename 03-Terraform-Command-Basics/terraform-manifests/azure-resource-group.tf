@@ -1,7 +1,8 @@
 # Terraform Settings Block
 terraform {
   required_version = ">= 1.0.0"
-  required_providers {
+  # registory.terraform.io
+  required_providers { # in our case, the provider is azure
     azurerm = {
       source = "hashicorp/azurerm"
       version = ">= 2.0" # Optional but recommended in production
@@ -9,7 +10,7 @@ terraform {
   }
 }
 
-# Configure the Microsoft Azure Provider
+# Configure the Microsoft Azure Provider (this is the provider block)
 provider "azurerm" {
   features {}
 }
