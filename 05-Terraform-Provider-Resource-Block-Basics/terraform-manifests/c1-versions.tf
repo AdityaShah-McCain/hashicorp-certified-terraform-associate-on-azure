@@ -2,7 +2,7 @@
 terraform {
   required_version = ">= 1.0.0"
   required_providers {
-    azurerm = {
+    azurerm = { # azurerm here is the local provider name, the same must be used in provider block*
       source = "hashicorp/azurerm"
       version = ">= 2.0"
       #version = "~> 2.0" # ~ allows only the last digit to change (2.1, 2.2, 2.3, etc.)        
@@ -13,7 +13,7 @@ terraform {
   }
 }
 # Provider Block
-provider "azurerm" {
+provider "azurerm" { # here*
   features {}
   subscription_id = "f7f5f1df-fec4-41dc-a919-6f2ece0a4569"
 }
