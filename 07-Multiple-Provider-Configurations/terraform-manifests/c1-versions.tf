@@ -12,6 +12,7 @@ terraform {
 # Provider-1 for EastUS (Default Provider)
 provider "azurerm" {
   features {}
+  subscription_id = "f7f5f1df-fec4-41dc-a919-6f2ece0a4569"
 }
 
 # Provider-2 for WestUS
@@ -21,6 +22,7 @@ provider "azurerm" {
       delete_os_disk_on_deletion = false # This will ensure when the Virtual Machine is destroyed, Disk is not deleted, default is true and we can alter it at provider level
     }
   }
+  subscription_id = "f7f5f1df-fec4-41dc-a919-6f2ece0a4569"
   alias = "provider2-westus"
   #client_id = "XXXX"
   #client_secret = "YYY"
